@@ -1,0 +1,38 @@
+// Text boyutu "Ctrl+MouseTopu" kullanarak ayarlanabilir.
+// F5 tusu ile direkt kod uretilebilir.
+
+class @var1
+{
+     @tr@ttip _@tvar;
+     @tr
+    //id çikarilmalı
+    @var1(@trthis._@tvar,@tr);
+
+    @var1.WhitId(@trthis._@tvar,@tr);
+
+    @tr @ttip get @tvar => _@tvar;
+    @tr
+
+    @tr
+        set @tvar(@ttip value){
+            _@tvar=value;
+        }
+    @tr
+
+     Map<String,dynamic> toMap() {
+    var map = Map<String,dynamic>();
+    //id alanına null değilse id döndür sartı eklenmeli!!!
+    @tr 
+    map["@tvar"]= _@tvar;    @tr
+
+    return map;
+    }
+
+     @var1.fromObject(dynamic o){
+        @tr
+        this._@tvar =o["@tvar"];@tr
+    }
+
+}
+
+   

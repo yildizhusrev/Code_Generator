@@ -1,0 +1,47 @@
+//@var1 Table Name
+//@var2 Database Name
+
+class DbHelper
+{
+     String tbl@var1="@var1";
+     @tr 
+      String col@tvar="@tvar";  @tr
+
+
+    
+    static final DbHelper _dbHelper = DbHelper._internal();
+
+    DbHelper._internal(); 
+
+        factory DbHelper(){
+            return _dbHelper;
+        }
+
+    static Database _db;
+    
+    Future<Database> get db async{
+        if(_db==null){
+           _db = await initializeDb();
+        }
+         return _db;
+    }
+
+    Future<Database>   initializeDb()  async {
+        Directory directory = await getApplicationDocumentsDirectory();
+        String path = directory.path+"@var2.db";
+        var db@var2 = await openDatabase(path,version:1,onCreate: _createDB); 
+        return dbSozluk;
+     }
+
+     void _createDB(Database  db, int version) async{
+            //$colid integer primary key eklenmeli
+            await db.execute("Create table $@var1(@tr$col@tvar text,@tr)");
+
+     }
+    
+    }
+
+
+
+
+   
